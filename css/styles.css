@@ -11,10 +11,10 @@
   --dark-background-color: #2e2f42;
   --light-background-color: #f4f4fd;
   --subtle-backgrounds: #e7e9fc;
+  --hover-color: #404bbf;
 }
 body {
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
   background: var(--main-bacground-color);
   color: var(--title-text-color);
 }
@@ -29,8 +29,6 @@ body {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-color);
@@ -57,7 +55,7 @@ body {
 }
 .header-link:hover,
 .header-link:focus {
-  color: var(--hover-text-color);
+  color: var(--hover-color);
   text-decoration: none;
 }
 .header-link:active {
@@ -65,11 +63,10 @@ body {
 }
 .header-mail,
 .header-tel {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-
+  text-decoration: none;
   color: var(--primary-text-color);
 }
 .header-mail:hover,
@@ -93,7 +90,7 @@ body {
   color: var(--focus-text-color);
 }
 .hero-button {
-    cursor: pointer;
+  cursor: pointer;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -108,13 +105,13 @@ body {
 }
 .hero-button:hover,
 .hero-button:focus {
-  background: #4d5ae5;
+  background: var(--hover-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 4px;
 }
 .hero-button:active {
-  background: #404bbf;
+  background: var(--hover-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
@@ -145,15 +142,13 @@ body {
   /* color: var(--title-text-color); */
 }
 .benefits-text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
 }
 
 .heading {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
@@ -168,7 +163,7 @@ body {
   background-color: var(--light-background-color);
 }
 .team-title {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
@@ -180,12 +175,13 @@ body {
 .team-cards {
   list-style: none;
 }
-.name-card-text {
+.team-item {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
   background: var(--focus-text-color);
 }
+
 .name-card {
   font-weight: 500;
   font-size: 20px;
@@ -196,7 +192,6 @@ body {
   /* color: var(--title-text-color); */
 }
 .position {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
@@ -224,7 +219,6 @@ body {
   color: var(--logo-light-text-color);
 }
 .footer-text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -233,8 +227,7 @@ body {
 
 .section-button-navigation {
 }
-.visually-hidden {
-}
+
 .button-navigation {
   list-style: none;
 }
@@ -244,8 +237,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: flex-start;
+
   text-align: center;
   letter-spacing: 0.04em;
 
@@ -255,7 +247,8 @@ body {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
 }
-.primary {
+.button:hover,
+.button:focus {
   color: var(--focus-text-color);
   background: var(--accent-color);
   align-items: center;
@@ -279,13 +272,11 @@ body {
   color: var(--title-text-color);
 }
 .project-direction {
-font-weight: 400;
-font-size: 16px;
-line-height: 1,5;
-letter-spacing: 0.02em;
-color: var(--primary-text-color);    
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
 }
-
 
 .projects {
   list-style: none;
