@@ -13,17 +13,49 @@
   --subtle-backgrounds: #e7e9fc;
   --hover-color: #404bbf;
 }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {display: flex;
+  margin: 0;
+  padding-left: 0;
+}
 body {
   font-family: 'Roboto', sans-serif;
   background: var(--main-bacground-color);
   color: var(--title-text-color);
 }
-.header {
+
+.container {
+
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  /* outline: 1px solid red; */
 }
+
+.header {border-bottom: 1px solid #E7E9FC;
+}
+.header>.container{  display: flex;
+  align-items: center;}
 .header-navigation {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+
+  
 }
 .logo,
 .logo-black-color {
+
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
@@ -33,16 +65,23 @@ body {
   text-transform: uppercase;
   color: var(--accent-color);
   text-decoration: none;
+  margin-right: 56px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .logo-black-color {
   color: var(--logo-text-color);
 }
 .header-list {
+  gap: 40px;
   list-style: none;
 }
 .header-item {
+  
 }
 .header-link {
+  padding-top: 24px;
+  padding-bottom: 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -63,6 +102,8 @@ body {
 }
 .header-mail,
 .header-tel {
+  padding-top: 24px;
+  padding-bottom: 24px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -79,13 +120,19 @@ body {
   background: var(--dark-background-color);
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 .hero-title {
+  width: 494px;
   font-weight: 500;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
+  margin-bottom: 48px;
+  margin-right: auto;
+  margin-left: auto;
 
   color: var(--focus-text-color);
 }
@@ -102,6 +149,9 @@ body {
   background: #4d5ae5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  padding: 16px 32px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -115,8 +165,11 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
+
 .section {
+  padding-top: 120px;
 }
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -130,7 +183,10 @@ body {
   margin: -1px;
 }
 .benefits-content-container {
+  display: flex;
   list-style: none;
+  gap: 24px;
+ 
 }
 .benefits-text-container {
 }
@@ -139,14 +195,18 @@ body {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
   /* color: var(--title-text-color); */
 }
 .benefits-text {
+  width: 264px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-
+.section-heading {
+  padding: 120px 0;
+}
 .heading {
   font-weight: 700;
   font-size: 36px;
@@ -154,13 +214,18 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
   /* color: var(--title-text-color); */
 }
 .heading-images {
+  display: flex;
   list-style: none;
+  gap: 24px;
 }
 .section-employees {
   background-color: var(--light-background-color);
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .team-title {
   font-weight: 700;
@@ -169,10 +234,12 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
 
   /* color: var(--title-text-color); */
 }
 .team-cards {
+  gap: 24px;
   list-style: none;
 }
 .team-item {
@@ -180,6 +247,7 @@ body {
     0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
   background: var(--focus-text-color);
+  width: calc((100%-48px)/3);
 }
 
 .name-card {
@@ -188,6 +256,8 @@ body {
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
+  margin-top: 32px;
+  margin-bottom: 8px;
 
   /* color: var(--title-text-color); */
 }
@@ -196,29 +266,34 @@ body {
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
+  margin-bottom: 32px;
 
   color: var(--primary-text-color);
 }
 .footer {
+  
   background: var(--dark-background-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .footer-logo {
+  display:inline-block;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-color);
   text-decoration: none;
+  margin-bottom: 16px;
 }
 .logo-white {
   color: var(--logo-light-text-color);
 }
 .footer-text {
+  width: 264px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -226,10 +301,16 @@ body {
 }
 
 .section-button-navigation {
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
 
 .button-navigation {
+  display: flex;
+  padding-bottom: 72px;
   list-style: none;
+ justify-content: center;
+ gap: 24px;
 }
 .button {
   cursor: pointer;
@@ -245,7 +326,10 @@ body {
 
   background: var(--light-background-color);
   border: 1px solid #e7e9fc;
+
   border-radius: 4px;
+
+  padding: 12px 24px;
 }
 .button:hover,
 .button:focus {
@@ -257,12 +341,26 @@ body {
   border-radius: 4px;
 }
 .filter {
-  text-decoration: none;
+
+   text-decoration: none;
 }
 .project-text {
-  border: 0.5px solid #f4f4fd;
+  max-width: 360px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  border-bottom: 1px solid #E7E9FC;
+  border-left: 1px solid #E7E9FC;
+  border-right: 1px solid #E7E9FC;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+  /* border-top: none; */
+   
   background: var(--main-bacground-color);
+ 
+ 
+
+  
 }
 .project-title {
   font-weight: 500;
@@ -270,14 +368,32 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+  
+  margin-bottom: 8px;
+  
+  
 }
 .project-direction {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+ 
+  
 }
 
 .projects {
+  display: flex;
+    flex-wrap: wrap;
   list-style: none;
+  column-gap: 24px;
+  row-gap: 48px;
+/* gap: 48px 24px; */
 }
+.project-item{
+
+  flex-basis: calc((1128px-48px)/3);
+}
+.project-image{display: block;
+max-width: 100%;
+height: auto;}
